@@ -55,6 +55,7 @@ footer a {
 
 .main_content {
    margin: 5rem 3rem 0 3rem;
+   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
    max-width: 48rem;
 }
 
