@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --cyan: #2ab2af;
+   --light-cyan: hsl(179, 47%, 55%);
+   --bright-yellow: #c0df34;
+   --light-gray: #e5eff5;
+   --grayish-blue: #98a6bd;
+   --bg-white: #fff;
+
+   --font-size-10: 62.5%; /* 10px */
+   --font-fam-karla: "Karla", sans-serif;
+   --font-weight-400: 400;
+   --font-weight-700: 700;
+}
+
+html {
+   font-size: var(--font-size-10);
+   font-family: var(--font-fam-karla);
+}
+
+body {
+   font-size: 1.4rem;
+   font-weight: var(--font-weight-400);
+   background-color: var(--light-gray);
+   color: var(--light-gray);
+}
+
+footer {
+   text-align: center;
+   color: var(--cyan);
+}
+
+footer a {
+   text-decoration: none;
+}
+
+/* ================ mobile styling content start here ================ */
+
+.container {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem; /* between main_content & footer */
+   align-items: center;
+   min-width: 32rem;
+}
+
+.main_content {
+   margin: 5rem 3rem 0 3rem;
+   max-width: 48rem;
+}
+
+.card {
+   padding: 2.5rem 2rem;
+}
+
+.community {
+   border-radius: 0.5rem 0.5rem 0 0;
+   background-color: var(--bg-white);
+   color: var(--grayish-blue);
+}
+
+.com_title {
+   font-size: 2rem;
+   color: var(--cyan);
+   margin-bottom: 2rem;
+}
+
+.com_subtitle {
+   font-size: 1.5rem;
+   color: var(--bright-yellow);
+   margin-bottom: 2rem;
+}
+
+.com_details {
+   line-height: 2.5rem;
+}
+
+.subscription {
+   background-color: var(--cyan);
+}
+
+.subscription_title {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+}
+
+.price {
+   font-size: 3rem;
+   display: flex;
+   align-items: center;
+   gap: 1rem; /* between price & per month */
+   font-weight: var(--font-weight-700);
+   margin-bottom: 0.5rem;
+}
+
+.price span {
+   font-size: initial;
+   font-weight: initial;
+   opacity: 0.65;
+}
+
+.subscription_detail {
+   margin-bottom: 3rem;
+}
+
+.signup_btn {
+   width: 100%;
+   background-color: var(--bright-yellow);
+   border: none;
+   border-radius: 0.5rem;
+   padding: 1.5rem;
+   color: var(--light-gray);
+   font-weight: var(--font-weight-700);
+   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+   outline: none;
+}
+
+.signup_btn:hover {
+   cursor: pointer;
+   filter: brightness(110%) saturate(100%);
+}
+
+.services {
+   background-color: var(--light-cyan);
+   border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.services_title {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+}
+
+.services ul {
+   list-style-type: none;
+   line-height: 2rem;
+}
+
+/* ================ desktop styling content start here ================ */
+@media (min-width: 60.1rem) {
+   .container {
+      min-width: 48.1rem;
+   }
+
+   .main_content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      max-width: 60rem;
+   }
+
+   .card {
+      padding: 3rem;
+   }
+
+   .community {
+      grid-column: span 12;
+   }
+
+   .com_details {
+      padding-right: 4rem;
+   }
+
+   .subscription {
+      grid-column: span 6;
+      border-radius: 0 0 0 0.5rem;
+   }
+
+   .services {
+      grid-column: span 6;
+      border-radius: 0 0 0.5rem 0;
+   }
+}
